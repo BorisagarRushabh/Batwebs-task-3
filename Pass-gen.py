@@ -1,18 +1,27 @@
 # This is random password generator
 
-import random;
-print("Generate your password !")
+import random
+import string
 
-char ="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()<>,.?1234567890"
-number = input('Amount of password to generate:-')
-number= int(number)
 
-length = input("INput the length of password:-")
-length= int(length)
+def input_length():
+    try:
+        amount = int(input("number of passwords to be generated: "))
+        length = int(input("length of each password: "))
+    except ValueError:
+        print("\nplease provide valid numerical values!\n")
+        input_length()
+    return [
+        "".join(
+            random.choices(
+                string.ascii_letters + string.digits + string.punctuation, k=length
+            )
+        )
+        for password in range(amount)
+    ]
 
-print("\n These are your passwords:-")
-for pwd in range(number):
-    passwords = ''
-    for c in range(length):
-        passwords += random.choice(char)
-    print(passwords)
+
+passwords = input_length()
+print("\ngenerated passowrds:\n")
+for password in passwords:
+    print(password, "\n")

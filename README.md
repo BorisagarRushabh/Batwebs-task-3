@@ -16,8 +16,7 @@ A simple password generator application that allows users to create secure and r
 
 ## Tech Stack
 
-- **Frontend**: HTML, CSS, JavaScript (Vanilla)
-- **Backend**: None (Purely frontend)
+- **Language Used**: Python
 - **Deployment**: GitHub Pages (optional)
 
 ## Project Structure
@@ -25,9 +24,7 @@ A simple password generator application that allows users to create secure and r
 ```
 password-generator/
 │
-├── index.html           # Main HTML file
-├── style.css            # Stylesheet for the app
-├── script.js            # JavaScript functionality
+├── Pass-gen.py           # Main Python file
 └── README.md            # Project documentation
 ```
 
@@ -44,13 +41,9 @@ Ensure you have a web browser installed (any modern browser will do).
    ```bash
    git clone https://github.com/BorisagarRushabh/Password-Generator.git
    cd Password-Generator
+   python3 pass-gen.py
    ```
-
-2. Open the `index.html` file in your browser:
-
-   - Right-click on `index.html` and choose "Open with" > "Your Browser"
-   - Alternatively, you can deploy it on any static hosting platform or use GitHub Pages for live use.
-
+   
 ## Usage
 
 1. Open the application.
